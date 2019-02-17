@@ -13,7 +13,12 @@ Route.patch('products/:id', 'ProductController.update');
 Route.delete('products/:id', 'ProductController.delete');
 
 Route.get('types', 'TypeController.index');
-Route.post('types', 'TypeController.newType');
+Route.post('types', 'TypeController.create');
 Route.get('types/:id', 'TypeController.show');
 Route.delete('types/:id', 'TypeController.delete');
 
+Route.get('attributes', 'AttributeController.index');
+Route.post('attributes', 'AttributeController.create');
+Route.get('attributes/:id', 'AttributeController.show');
+Route.patch('attributes/:id', 'AttributeController.update');
+Route.delete('attributes/:id', 'AttributeController.delete');
