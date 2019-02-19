@@ -17,18 +17,18 @@ class ProductSchema extends Schema {
       table
         .foreign('type_id')
         .references('id')
-        .on('types');
-
+        .on('types')
+        .onDelete('cascade');
       table
         .foreign('user_id')
         .references('id')
-        .on('users');
-
+        .on('users')
+        .onDelete('cascade');
       table
         .foreign('attribute_id')
         .references('id')
-        .on('attributes');
-
+        .on('attributes')
+        .onDelete('cascade');
       table.timestamps();
     });
   }
