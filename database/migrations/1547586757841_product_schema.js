@@ -8,7 +8,7 @@ class ProductSchema extends Schema {
       table.string('name', 60).notNullable();
       table.integer('type_id').notNullable();
       table.integer('user_id').notNullable();
-      table.integer('attribute_id').notNullable();
+
       table
         .decimal('price')
         .notNullable()
@@ -23,11 +23,6 @@ class ProductSchema extends Schema {
         .foreign('user_id')
         .references('id')
         .on('users')
-        .onDelete('cascade');
-      table
-        .foreign('attribute_id')
-        .references('id')
-        .on('attributes')
         .onDelete('cascade');
       table.timestamps();
     });

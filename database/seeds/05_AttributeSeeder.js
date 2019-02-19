@@ -9,7 +9,8 @@ class AttributeSeeder {
       { name: 'Display Type', type_id: 1 },
       { name: 'Display Resolution', type_id: 1 },
       { name: 'RAM', type_id: 2 },
-      { name: 'ROM', type_id: 3 }
+      { name: 'ROM', type_id: 3 },
+      { name: 'Capasitor', type_id: 3 }
     ];
     await Attribute.createMany(attributes);
   }

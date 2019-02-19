@@ -9,7 +9,7 @@ class RoleSchema extends Schema {
         .string('name')
         .notNullable()
         .unique();
-      table.text('describtion').nullable();
+      table.text('description').nullable();
       table.timestamps();
     });
   }

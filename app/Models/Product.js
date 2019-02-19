@@ -1,16 +1,16 @@
 /** @type {typeof import('@adonisjs/lucid/src/Lucid/Model')} */
-const Model = use('Model');
+const Base = require('./Base');
 
-class Product extends Model {
+class Product extends Base {
   static get updatedAtColumn() {
     return null;
   }
 
-  user() {
+  users() {
     return this.belongsToMany('App/Models/User');
   }
 
-  type() {
+  types() {
     return this.belongsToMany('App/Models/Type');
   }
 

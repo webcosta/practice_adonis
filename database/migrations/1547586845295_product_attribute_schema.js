@@ -7,7 +7,6 @@ class ProductAttributeSchema extends Schema {
       table.increments();
       table.integer('product_id').notNullable();
       table.integer('attribute_id').notNullable();
-      table.text('value');
       table
         .foreign('product_id')
         .references('id')

@@ -10,6 +10,10 @@ class Attribute extends Base {
   productAttributes() {
     return this.belongsToMany('App/Models/ProductAttribute');
   }
+
+  // products() {
+  //   return this.manyThrogh('App/Models/ProductAttributes', 'product_id');
+  // }
 }
 
 module.exports = Attribute;
