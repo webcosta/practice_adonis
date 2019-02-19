@@ -13,7 +13,12 @@ class UserSchema extends Schema {
         .string('email', 254)
         .notNullable()
         .unique();
-      table.string('role', 20).notNullable();
+      table.integer('role_id').notNullable();
+      table
+        .foreign('role_id')
+        .references('id')
+        .on('roles')
+        .onDelete('cascade');
       table.string('password', 60).notNullable();
       table.timestamps();
     });

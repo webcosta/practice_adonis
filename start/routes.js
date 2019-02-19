@@ -15,6 +15,7 @@ Route.delete('products/:id', 'ProductController.delete');
 Route.get('types', 'TypeController.index');
 Route.post('types', 'TypeController.create');
 Route.get('types/:id', 'TypeController.show');
+Route.patch('types/:id', 'TypeController.update');
 Route.delete('types/:id', 'TypeController.delete');
 
 Route.get('attributes', 'AttributeController.index');
